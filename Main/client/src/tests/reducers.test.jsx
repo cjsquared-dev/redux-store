@@ -1,3 +1,4 @@
+import {test, expect} from 'vitest';
 import { reducer } from '../utils/reducers';
 import {
   UPDATE_PRODUCTS,
