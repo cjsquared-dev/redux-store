@@ -1,13 +1,19 @@
-import React from "react";
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
+import { useSelector, useDispatch } from "react-redux";
 import Cart from "../components/Cart";
+import { UPDATE_PRODUCTS } from "../utils/actions";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.products);
+  
+
+
   return (
     <div className="container">
       <CategoryMenu />
-      <ProductList />
+      <ProductList products={products}/>
       <Cart />
     </div>
   );
