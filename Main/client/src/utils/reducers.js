@@ -46,8 +46,11 @@ export const reducer = (state = initialState, action) => {
         ...state,
         cartOpen: true,
         cart: state.cart.map((product) => {
-          if (action._id === product._id) {
-            product.purchaseQuantity = action.purchaseQuantity;
+          if (product._id === action._id) {
+            return {
+              ...product,
+              purchaseQuantity: action.purchaseQuantity,
+            };
           }
           return product;
         }),
