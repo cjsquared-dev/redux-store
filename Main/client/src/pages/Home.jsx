@@ -5,7 +5,6 @@ import Cart from "../components/Cart";
 import { UPDATE_PRODUCTS } from "../utils/actions";
 
 const Home = () => {
-  const dispatch = useDispatch();
   const products = useSelector((state) => state.products);
   
 
